@@ -4,6 +4,7 @@
       <div class="sb-sidenav-menu">
         <div class="nav">
           <div class="sb-sidenav-menu-heading">เมนูหลัก</div>
+
           <router-link class="nav-link" :to="{ name: 'Home' }">
             <div class="sb-nav-link-icon">
               <i class="fas fa-tachometer-alt"></i>
@@ -22,9 +23,8 @@
             <div class="sb-nav-link-icon">
               <i class="fas fa-tachometer-alt"></i>
             </div>
-            ตำแหน่ง
+            ข้อมูลตำแหน่ง
           </router-link>
-
         </div>
       </div>
       <div class="sb-sidenav-footer">
@@ -46,5 +46,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

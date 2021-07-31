@@ -1,0 +1,1 @@
+export const BASE_API_URL = "https://nestjs-app-backend.herokuapp.com/v1/api";
