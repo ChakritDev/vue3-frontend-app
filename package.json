@@ -11,11 +11,14 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "chart.js": "^3.5.0",
     "core-js": "^3.6.5",
     "startbootstrap-sb-admin": "^7.0.2",
+    "sweetalert2": "^11.1.0",
     "vue": "^3.0.0",
+    "vue-chart-3": "^0.5.6",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",

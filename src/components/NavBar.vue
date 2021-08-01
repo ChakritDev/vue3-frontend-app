@@ -5,8 +5,7 @@
     <!-- Sidebar Toggle-->
     <button
       class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
-      id="sidebarToggle"
-      href="#!"
+      id="sidebarToggle" @click.prevent="onToggle"
     >
       <i class="fas fa-bars"></i>
     </button>
@@ -52,7 +51,7 @@
           <li><a class="dropdown-item" href="#!">Settings</a></li>
           <li><a class="dropdown-item" href="#!">Activity Log</a></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="#!">Logout</a></li>
+          <li><a @click.prevent="logout" class="dropdown-item" href="#!">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -60,12 +59,24 @@
 </template>
 
 <script lang="ts">
+import router from "@/router";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "NavBar",
   setup() {
-    return {};
+
+    const onToggle = () => {
+      document.body.classList.toggle('sb-sidenav-toggled');
+      localStorage.setItem('sb|sidebar-toggle', String(document.body.classList.contains('sb-sidenav-toggled'))) ;
+
+    }
+
+    const logout = () =>{
+      localStorage.removeItem("token");
+      router.replace('/login');
+    };
+    return {onToggle,logout};
   },
 });
 </script>

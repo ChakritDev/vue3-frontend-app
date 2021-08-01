@@ -10,11 +10,27 @@ const positionRoutes: Array<RouteRecordRaw> = [
     },
     children: [
       {
-        path: "position",
+        path: "",
         name: "PositionIndex",
         component: () =>
           import(
             /* webpackChunkName: "PositionIndex" */ "@/views/position/PositionIndex.vue"
+          ),
+      },
+      {
+        path: "create",
+        name: "PositionCreate",
+        component: () =>
+          import(
+            /* webpackChunkName: "PositionCreate" */ "@/views/position/PositionCreate.vue"
+          ),
+      },
+      {
+        path: ":id/update",
+        name: "PositionUpdate",
+        component: () =>
+          import(
+            /* webpackChunkName: "PositionUpdate" */ "@/views/position/PositionUpdate.vue"
           ),
       },
     ],
